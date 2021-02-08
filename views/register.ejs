@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Register Login with Authentication</title>
+<!--Custom Theme files-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- Custom Theme files -->
+<link href="/css/register.css" rel="stylesheet" type="text/css" media="all" />
+<!--web-fonts-->
+<link href='//fonts.googleapis.com/css?family=Jura:400,300,500,600' rel='stylesheet' type='text/css'>
+<!--//web-fonts-->
+</head>
+<body>
+   
+	<h1>User Registration 🚀</h1>
+	<!-- main -->
+	<div class="main">
+		<!--login-profile-->
+		
+		<!--login-profile-->
+		<!--signin-form-->
+		<div class="w3">
+			<div class="signin-form profile">
+				<h3>Login</h3>
+				
+				<div class="login-form">
+					<form action="/login" method="post" id="login" onsubmit="event.preventDefault();validateLoginForm();">
+						<input type="text" name="logemail"  class="form-control" placeholder="Useremail" id="logemail">
+						<input type="password" name="logpassword"  class="form-control" placeholder="Password" id="logpassword">
+						<div class="tp">
+							<input type="submit" value="LOGIN NOW">
+						</div>
+					</form>
+				</div>
+				
+					<p id="error"></p>
+					<% if(message !=null){ %>
+						<p id="error"><%=message%> </p>
+					<% } %>
+			</div>
+		</div>
+		<div class="agile">
+			<div class="signin-form profile">
+				<h3>Create</h3>
+				
+				<div class="register-form">
+                    <form id="register" action="/register" method="post" onsubmit="event.preventDefault(); validateRegisterForm();">
+                        <input type="text" name="username" class="form-control" placeholder="Username" id="username" value="">
+						<input type="text" name="email" class="form-control" placeholder="E-mail" id="email">
+						<input type="password" name="password" class="form-control" placeholder="Password" id="password">
+						<input type="password" name="passwordConf" class="form-control" placeholder="Confirm Password" id="password_conf">
+						<input type="file" name="displayImage" class="form-control" id="display_image">
+						<input type="submit" value="REGISTER">
+					</form>
+				</div>
+				<% if(message !=null){ %>
+					<p id="error"><%=message%> </p>
+				<% } %>
+			
+			</div>
+		</div>
+		<div class="clear"></div>
+		<!--//signin-form-->	
+	</div>
+
+
+	<form class="mt-4" action="/upload" method="POST" enctype="multipart/form-data">
+		<div class="form-group">
+		<input type="file" name="file" id="input-files" class="form-control-file border" />
+		</div>
+		<button type="submit" class="btn btn-primary">Submit</button>
+  	</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<div class="copyright">
+		<p> &copy; 2016 Register Login Widget . All rights reserved | Design by <a href="http://w3layouts.com/" target="_blank" >W3layouts</a></p>
+	</div>	
+<script src="/js/resgister_login.js"></script>
+
+</body>
+</html>
